@@ -1,0 +1,184 @@
+body,
+html {
+    font-family: 'Roboto Mono', monospace;
+}
+
+#center,
+#discord {
+    position: fixed;
+    text-align: center;
+    font-family: Consolas, monospace;
+}
+
+html {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.example::-webkit-scrollbar {
+    display: none;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.back {
+    width: 100%;
+}
+
+#overlay-toggle {
+    position: absolute;
+    display: none;
+}
+
+.overlay {
+    z-index: 1;
+    background-color: #000;
+}
+
+.overlay label {
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vw;
+    color: #fff;
+    font-size: 2.5rem;
+}
+
+#discord {
+    top: 46.7%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#center,
+.center,
+.fullscreen {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fullscreen {
+    position: fixed;
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+body {
+    background-color: #000!important;
+    color: #fff!important;
+    background: #fff;
+}
+
+#overlay-toggle:checked~.overlay {
+    animation-fill-mode: forwards;
+    animation-name: fade, hide;
+    animation-delay: 0s, .6s;
+    animation-duration: .6s, 1ms;
+}
+
+#overlay-toggle:checked~.overlay label {
+    animation-fill-mode: forwards;
+    animation-name: fade;
+    animation-delay: 0s;
+    animation-duration: .5s;
+}
+
+@media (hover: hover) {
+    .hover {
+        display: block;
+    }
+
+    .no-hover {
+        display: none;
+    }
+}
+
+@keyframes fade {
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes hide {
+    to {
+        visibility: hidden;
+    }
+}
+
+.center {
+    position: absolute;
+}
+
+@media only screen and (max-width: 600px) {
+    h4 {
+        position: absolute;
+        text-transform: uppercase!important;
+        font-size: 1em!important;
+        font-family: 'VCR OSD Mono', sans-serif!important;
+        padding: 20px 60px 60px;
+        width: 70%;
+        text-align: center;
+        top: 0;
+        left: 0;
+        margin-left: 150px;
+        z-index: 0;
+    }
+}
+
+.rainbow {
+    text-shadow: 2px 2px 4px #000;
+    -webkit-animation: 5s infinite rainbow;
+    -ms-animation: rainbow 5s infinite;
+    animation: 5s infinite rainbow;
+}
+
+@-webkit-keyframes rainbow {
+    0%, 100% {
+        color: red;
+    }
+    17% {
+        color: orange;
+    }
+    33% {
+        color: #ff0;
+    }
+    50% {
+        color: green;
+    }
+    67% {
+        color: #00f;
+    }
+    84% {
+        color: purple;
+    }
+}
+
+@-ms-keyframes rainbow {
+    0%, 100% {
+        color: red;
+    }
+    17% {
+        color: orange;
+    }
+    33% {
+        color: #ff0;
+    }
+    50% {
+        color: green;
+    }
+    67% {
+        color: #00f;
+    }
+    84% {
+        color: purple;
+    }
+}

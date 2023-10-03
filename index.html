@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="suffocation#0001">
+    <meta property="og:url" content="funeral.wtf">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="">
+
+    <title>suffocation#0001</title>
+</head>
+<body oncontextmenu="return false;">
+    <input type="checkbox" id="overlay-toggle" autocomplete="off">
+    <div class="overlay fullscreen">
+        <div id="center">
+            <label for="overlay-toggle" onclick="audioPlay(); videoPlay()">
+                <div id="enter"><b class="begin rainbow">click ^_^</b></div>
+            </label>
+        </div>
+    </div>  
+   
+    <section class="fullscreen text-content">
+        <audio loop preload="auto" id="audio">
+            <source src="https://cdn.discordapp.com/attachments/910522014077444177/1158887160024408084/rf.mp3" type="audio/mp3">
+        </audio>
+
+        <video id="video" width="1920" height="1080" muted loop>
+            <source src="https://cdn.discordapp.com/attachments/910522014077444177/1158886785351422002/videoplayback.mp4" type="video/mp4">
+        </video>
+
+        <div id="discord">
+            <img class="fade-in-text" src="https://discord.c99.nl/widget/theme-4/903406675074121768.png" alt="Centered Image" draggable="false">
+        </div>
+
+        <script>
+            let counter = 0;
+            let Title = 'suffocation#0001';
+            let direction = true;
+            aniTitle = setInterval(function() {
+                if (counter == Title.length) direction = false;
+                if (counter == false) direction = true;
+                counter = (direction == true) ? ++counter : --counter;
+                newtitle = (counter == 0) ? "" : Title.slice(0, counter);
+                document.title = '' + newtitle;
+            }, 400);
+            
+            document.onkeydown = function(event) {
+                if (event.keyCode == 123 || (event.ctrlKey && event.shiftKey && (event.keyCode == 73 || event.keyCode == 74))) {
+                    return false;
+                }
+            };
+            
+            function audioPlay() {
+                var audio = document.getElementById("audio");
+                audio.volume = 0.3;
+                audio.play();
+            }
+            
+            function videoPlay() {
+                var video = document.getElementById("video");
+                video.play();
+            }
+        </script>
+    </section>
+</body>
+</html>
