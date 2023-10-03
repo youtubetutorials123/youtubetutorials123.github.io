@@ -1,0 +1,1 @@
+new Typed('#typed',{strings:[,'flash#1337','my goals are beyond your understanding',],typeSpeed:35,delaySpeed:90,showCursor:false,loop:true})
