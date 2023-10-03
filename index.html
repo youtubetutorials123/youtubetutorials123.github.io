@@ -20,7 +20,18 @@
             </label>
         </div>
     </div>  
-   
+   <script>
+            function audioPlay() {
+                var audio = document.getElementById("audio");
+                audio.volume = 0.3;
+                audio.play();
+            }
+
+            function videoPlay() {
+                var video = document.getElementById("video");
+                video.play();
+            }
+        </script>
     <section class="fullscreen text-content">
         <audio loop preload="auto" id="audio">
             <source src="https://cdn.discordapp.com/attachments/910522014077444177/1158887160024408084/rf.mp3" type="audio/mp3">
