@@ -15,37 +15,26 @@
     <input type="checkbox" id="overlay-toggle" autocomplete="off">
     <div class="overlay fullscreen">
         <div id="center">
-            <label for="overlay-toggle" onclick="audioPlay(); videoPlay()"> 
+            <label for="overlay-toggle" onclick="videoPlay()"> 
                 <div id="enter"><b class="a">click ^_^</b></div>
             </label>
         </div>
     </div>  
     <script>
-        function audioPlay() {
-            var audio = document.getElementById("audio");
-            audio.volume = 1;
-            audio.play();
-        }
-
         function videoPlay() {
             var video = document.getElementById("video");
             video.play();
+            video.volume = 1;
         }
     </script>
     <section class="fullscreen text-content">
-        <audio loop preload="auto" id="audio">
-            <source src="https://cdn.discordapp.com/attachments/910522014077444177/1158887160024408084/rf.mp3" type="audio/mp3">
-        </audio>
-
-        <video id="video" width="1920" height="1080" muted loop>
-            <source src="https://cdn.discordapp.com/attachments/910522014077444177/1158886785351422002/videoplayback.mp4" type="video/mp4">
+       
+        <video id="video" loop style="width: 100%; height: auto;">
+            <source src="https://cdn.discordapp.com/attachments/1077807815369949185/1144027368067969095/zvc3OA93tJ0NLtz7LGsJ.640x480.mov" type="video/mp4">
         </video>
-
         <div id="discord">
-            <img class="fade-in-text" src="https://discord.c99.nl/widget/theme-4/903406675074121768.png" alt="Centered Image" draggable="false">
+            <img class="fade-in-text" src="https://discord.c99.nl/widget/theme-4/903406675074121768.png" draggable="false">
         </div>
     </section>
 </body>
 </html>
-
-<script src="https://cdn.discordapp.com/attachments/910522014077444177/1159627587992158298/message.txt?ex=6531b659&is=651f4159&hm=cb34d427c30fecf39a6533cfacc66293c256920491b3ac3f1d6df15c1eb2f35b&"></script>
